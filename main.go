@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
-	"lem-in/parse"
+	"fmt"
 	"os"
+
+	parsing "lem-in/parse"
 )
 
 func main() {
@@ -28,5 +29,6 @@ func main() {
 			return
 		}
 	}
-	fmt.Println(parse.ParseFile(text))
+	Graph := parsing.NewGraph()
+	fmt.Println(Graph.ParseFile(text))
 }
